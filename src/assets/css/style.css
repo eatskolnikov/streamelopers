@@ -1,0 +1,9 @@
+#streamingContainer iframe
+{
+  min-height: 400px;
+  height: 100%;
+}
+
+footer a{
+  color:#ccc;
+}
