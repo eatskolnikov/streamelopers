@@ -1,4 +1,4 @@
-var app = angular.module('Streamvelopers', ['ngRoute','ngSanitize']);
+var app = angular.module('Streamvelopers', ['ngRoute']);
 app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
