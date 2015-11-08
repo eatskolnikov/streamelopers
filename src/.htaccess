@@ -32,6 +32,7 @@ RewriteRule ^(.*) /index.html [NC,L]
   ExpiresByType image/jpeg "access 2 month"
   ExpiresByType image/png "access 2 month"
   ExpiresByType text/css "access 2 month"
+  ExpiresByType application/font-woff "access 2 month"
   ExpiresByType application/x-font-woff "access 2 month"
 
   ExpiresByType text/js "access plus 2 month"
