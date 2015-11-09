@@ -2,7 +2,7 @@
 About
 ==============
 
-[Streamvelopers](http://stream.torib.io) is a project made to support the Dominican software development community
+[Streamelopers](http://stream.torib.io) is a project made to support the Dominican software development community
 
 Setup and installation
 ==============
