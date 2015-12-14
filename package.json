@@ -7,6 +7,8 @@
     "grunt": "^0.4.5"
   },
   "devDependencies": {
+    "connect": "*",
+    "serve-static": "*",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
