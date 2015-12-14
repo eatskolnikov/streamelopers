@@ -39,4 +39,10 @@ Watching
 --------------
 	grunt watch
 
-Watches any changes made to code files inside the src/ folder. If the watcher sees a change it starts the building procces
+Watches any changes made to code files inside the src/ folder. If the watcher sees a change it starts the building process
+
+Running
+--------------
+	npm start
+
+Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accesible via http://localhost:8000
