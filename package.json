@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.html",
   "dependencies": {
+    "angular-youtube-embed": "^1.1.1",
     "grunt": "^0.4.5"
   },
   "devDependencies": {

@@ -40,11 +40,12 @@ module.exports = function(grunt) {
                      'bower_components/uikit/js/uikit.min.js',
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
+                     'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js',
                      //'bower_components/angular-sanitize/angular-sanitize.min.js',
                      //'bower_components/webrtc-adapter/adapter.js',
+                     'src/assets/js/shared.js',
                      'src/app/app.js',
-                     'src/app/controllers/*',
-                     'src/assets/js/shared.js'],
+                     'src/app/controllers/*'],
                 dest:'build/app.js'
             }
         },
@@ -80,7 +81,8 @@ module.exports = function(grunt) {
                 files: [
                     {expand: true, flatten: true, src: ['src/.htaccess'], dest: 'build/', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['bower_components/uikit/fonts/*'], dest: 'build/assets/fonts', filter:'isFile'},
-                    {expand: true, flatten: true, src: ['src/xvelopers.json'], dest: 'build/', filter:'isFile'}
+                    {expand: true, flatten: true, src: ['src/manifest.json'], dest: 'build/', filter:'isFile'},
+                    {expand: true, flatten: true, src: ['src/browserconfig.xml'], dest: 'build/', filter:'isFile'}
                 ]
             }
         },

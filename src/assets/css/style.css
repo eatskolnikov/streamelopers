@@ -13,3 +13,15 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+.uk-navbar{
+  background:0;
+}
+
+
+.navbar-logo{
+  width:140px;
+}
+
+.shadowed-text{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

@@ -4,16 +4,77 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Streamelopers" />
+    <meta property="og:description" content="desc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://streamelopers.org" />
+    <meta property="og:image" content="http://streamelopers.org/assets/img/logo.png" />
     <title>Streamelopers</title>
     <base href="/">
     <link href="assets/css/main.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
+  <!--
+    <nav class="uk-navbar uk-navbar-attached">
+      <div class="uk-container uk-container-center">
+        <a href="/" class="uk-navbar-brand uk-hidden-small">
+          <img class="navbar-logo" src="/assets/img/logos/logo-white-bg.png" alt="Streamelopers"/>
+        </a>
+        <a href="#sidebar" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+        <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
+          <a href="/">
+            <img class="navbar-logo" src="/assets/img/logos/logo-white-bg.png" alt="Streamelopers"/>
+          </a>
+        </div>
+        <ul class="uk-navbar-nav uk-hidden-small uk-navbar-flip">
+          <li class="uk-active"><a href="#">¿Qué es esto?</a></li>
+          <li><a href="#halloffame">Salón de la fama</a></li>
+          <li><a href="#">F.A.Q.S</a></li>
+        </ul>
+      </div>
+    </nav>-->
+
+    <div id="sidebar" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+            <li><a href="documentation_get-started.html">Get started</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="uk-container uk-container-center" ng-view></div>
+    <div id="modalDonate" class="uk-modal">
+      <div class="uk-modal-dialog">
+        <div class="uk-modal-header"><h4>Espera un momento...</h4></div>
+        <p><b>Streamelopers</b> tiene la misión de facilitar el acceso a la información a personas que no puedan asistir a charlas y eventos de los usergroups. Aun así, lo ideal es que todos participen directamente en su comunidad. Si estás en la misma ciudad donde se efectúa una actividad te recomendamos que participes presencialmente.</p>
+        <p>Ya que estás aquí, queremos que entiendas que e</p>
+        <p></p>
+        <iframe src="https://donorbox.org/embed/streamelopers?recurring=true" height="685px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
+        <div class="uk-modal-footer uk-text-right">
+          <button id="btnCloseModalDonate" type="button" class="uk-button uk-modal-close" disabled="disabled">Cerrar</button>
+        </div>
+      </div>
+    </div>
     <script src="app.min.js" async></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,7 +101,7 @@
         </div>
         <div class="uk-width-medium-3-5 uk-text-right uk-text-center-small">
           <p>&copy; 2015 Made by people who act their dreams with open eyes to make them possible</p>
-          <a href="https://goo.gl/hG49wq"> <i class="uk-icon-github"></i> Fork this page on github </a>
+          <a href="https://goo.gl/hG49wq" class="uk-button"> <i class="uk-icon-github"></i> Fork us on github </a>
         </div>
       </div>
     </div>

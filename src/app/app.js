@@ -1,4 +1,4 @@
-var app = angular.module('StreamelopersApp', ['ngRoute']);
+var app = angular.module('StreamelopersApp', ['ngRoute','youtube-embed']);
 app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
