@@ -2,7 +2,6 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
 {
   var orderBy = $filter('orderBy');
   this.playlists = [];
-  this.playerTitle = "Transmisión en vivo";
   this.playerVars = {
     autoplay: 1
   };

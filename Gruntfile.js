@@ -41,8 +41,6 @@ module.exports = function(grunt) {
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
                      'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js',
-                     //'bower_components/angular-sanitize/angular-sanitize.min.js',
-                     //'bower_components/webrtc-adapter/adapter.js',
                      'src/assets/js/shared.js',
                      'src/app/app.js',
                      'build/templates.js',
