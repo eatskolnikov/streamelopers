@@ -45,9 +45,20 @@ module.exports = function(grunt) {
                      //'bower_components/webrtc-adapter/adapter.js',
                      'src/assets/js/shared.js',
                      'src/app/app.js',
+                     'build/templates.js',
+                     'src/app/routes.js',
                      'src/app/controllers/*'],
                 dest:'build/app.js'
             }
+        },
+        ngtemplates:  {
+          StreamelopersApp:{
+            src:  'src/app/views/**/*.html',
+            dest: 'build/templates.js',
+            options: {
+               htmlmin:  { collapseWhitespace: true, removeComments: true }
+            }
+          }
         },
         uglify: {
             app:{
@@ -66,14 +77,6 @@ module.exports = function(grunt) {
                 files: {
                     'build/index.html': 'src/index.html'
                 }
-            },
-            views: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/app/views',
-                    src: '**/*.html',
-                    dest: 'build/app/views'
-                }]
             }
         },
         copy: {
@@ -114,23 +117,24 @@ module.exports = function(grunt) {
         remove: {
             clean: {
                 trace: true,
-                fileList: ['build/app.js', 'build/assets/css/main.css']
+                fileList: ['build/app.js', 'build/assets/css/main.css', 'build/templates.js']
             }
         }
     });
-    grunt.loadNpmTasks('grunt-remove');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-notify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-remove');
     grunt.registerTask('build', function () {
-        grunt.task.run(['jshint', 'clean:build', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove']);
+        grunt.task.run(['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove']);
     });
     grunt.registerTask('default', ['watch']);
 };
