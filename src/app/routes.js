@@ -5,6 +5,9 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
+        .when('/_=_', {
+          redirectTo: '/'
+        })
         .otherwise({
             templateUrl: 'app/views/404.html',
         });

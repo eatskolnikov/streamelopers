@@ -9,7 +9,6 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
   var playlistsUrl = 'https://www.googleapis.com/youtube/v3/playlists?key=AIzaSyCsH_dFYaU0Pvc2KZUE-I4LI8ppg3DmZKk&channelId=UCznWXigAvBa1ZtrgRmJGZgg&part=id,snippet,status';
   this.init = function(){
     $http.get(playlistsUrl).success(angular.bind(this, function(data){
-      console.log(data.items);
       this.playlists = orderBy(data.items,'title', false);
     }));
   };

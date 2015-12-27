@@ -2,9 +2,9 @@
 About
 ==============
 
-[Streamelopers](http://stream.torib.io) is a project made to support the Dominican software development community
+[Streamelopers](https://streamelopers.org) is a project made to support the Dominican software development community by providing access to talks and workshops to those who missed them. It has the intention to become a video index site and streaming platform.
 
-Setup and installation
+Setup and installation for development
 ==============
 
 Install nodejs
@@ -33,7 +33,7 @@ Building
 --------------
 	grunt build
 
-You can run the build task with this. It will validate js files and create a build folder where it will copy all the css, js, images and html minified.
+You can run the build task with this. It will validate js  files and create a build folder where it will copy all the css, js, images and html minified.
 
 Watching
 --------------
@@ -45,4 +45,4 @@ Running
 --------------
 	npm start
 
-Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accesible via http://localhost:8000
+Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accessible via http://localhost:8000
