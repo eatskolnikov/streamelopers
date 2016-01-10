@@ -25,16 +25,29 @@
       </div>
     </div>
   </div>
-  <h2>Transmisiones anteriores</h2>
-  <hr/>
-  <ul class="uk-thumbnav uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4">
-    <li ng-repeat="playlist in home.playlists">
-      <a ng-href="https://www.youtube.com/playlist?list={{playlist.id}}">
-        <figure class="uk-overlay ">
-          <img ng-src="{{playlist.snippet.thumbnails.medium.url}}"/>
-          <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom" >{{playlist.snippet.title}}</figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
+  <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
+    <div class="uk-width-1-1">
+      <h2>Transmisiones anteriores</h2>
+      <hr/>
+      <ul class="uk-thumbnav uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4">
+        <li ng-repeat="playlist in home.playlists">
+          <a ng-href="https://www.youtube.com/playlist?list={{playlist.id}}">
+            <figure class="uk-overlay ">
+              <img ng-src="{{playlist.snippet.thumbnails.medium.url}}"/>
+              <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom" >{{playlist.snippet.title}}</figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
+    <div class="uk-width-1-1">
+      <h2>Estamos aquí gracias a ...</h2>
+      <hr/>
+      <div ng-repeat="donor in home.donors">
+        {{donor.Name}}
+      </div>
+    </div>
+  </div>
 </section>

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         watch: {
             build: {
                 files: ['src/**/*.js','src/**/*.css', 'src/**/*.html', 'src/**/*.json'],
-                tasks: ['jshint', 'clean:build', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove'],
+                tasks: ['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove'],
                 options: {
                     spawn: false
                 }
@@ -38,6 +38,7 @@ module.exports = function(grunt) {
             app:{
                 src:['bower_components/jquery-2.1.4.min/index.js',
                      'bower_components/uikit/js/uikit.min.js',
+                     'bower_components/papaparse/papaparse.min.js',
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
                      'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js',
@@ -83,7 +84,8 @@ module.exports = function(grunt) {
                     {expand: true, flatten: true, src: ['src/.htaccess'], dest: 'build/', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['bower_components/uikit/fonts/*'], dest: 'build/assets/fonts', filter:'isFile'},
                     {expand: true, flatten: true, src: ['src/manifest.json'], dest: 'build/', filter:'isFile'},
-                    {expand: true, flatten: true, src: ['src/browserconfig.xml'], dest: 'build/', filter:'isFile'}
+                    {expand: true, flatten: true, src: ['src/browserconfig.xml'], dest: 'build/', filter:'isFile'},
+                    {expand: true, flatten: true, src: ['src/streamelopers_donations.csv'], dest: 'build/', filter:'isFile'}
                 ]
             }
         },

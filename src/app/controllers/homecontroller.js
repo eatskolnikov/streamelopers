@@ -2,6 +2,8 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
 {
   var orderBy = $filter('orderBy');
   this.playlists = [];
+  this.donors = [];
+
   this.playerVars = {
     autoplay: 1
   };
@@ -11,6 +13,17 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
     $http.get(playlistsUrl).success(angular.bind(this, function(data){
       this.playlists = orderBy(data.items,'title', false);
     }));
+    Papa.parse("/streamelopers_donations.csv", {
+    	download: true,
+	    header: true,
+    	complete: angular.bind(this, function(results) {
+    		console.log(results.data);
+        console.log(this.donors);
+        console.log(this);
+
+        this.donors = orderBy(results.data,'Amount',false);
+    	})
+    });
   };
   this.init();
 /*  this.vidStreaming = document.getElementById("vidStreaming");
