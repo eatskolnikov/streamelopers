@@ -23,7 +23,7 @@
     "grunt-remove": "^0.1.0",
     "grunt-string-replace": "^1.2.1",
     "serve-static": "*",
-    "vinyl-fs": "^2.3.1"
+    "vinyl-fs": "^2.2.1"
   },
   "author": "Enmanuel Toribio"
 }
