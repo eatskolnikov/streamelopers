@@ -2,8 +2,8 @@
 <video id="camera"></video>
 <!--<video id="preview"></video> -->
 <div class="control-panel">
-  <button id="btnRecord" class="uk-button" style="color:red"><i class="uk-icon-circle"><i></button>
-  <button id="btnPlay" class="uk-button" disabled><i class="uk-icon-play"><i></button>
-  <button id="btnDownload" class="uk-button " disabled><i class="uk-icon-download"><i></button>
-  <button id="btnFirefoxExtension" class="uk-button uk-button-danger" onclick="intallFirefoxScreenCapturingExtension(); return false;"><i class="uk-icon-cloud-download"></i> Install Firefox Extension</button>
+  <button id="btnRecord" data-uk-tooltip="{pos:'bottom-left'}" title="Record" class="uk-button" style="color:red"><i class="uk-icon-circle"><i></button>
+  <button id="btnPlay" data-uk-tooltip="{pos:'bottom-left'}" title="Play recorded video" class="uk-button" disabled><i class="uk-icon-play"><i></button>
+  <button id="btnDownload" data-uk-tooltip="{pos:'bottom-left'}" title="Download recorded video" class="uk-button " disabled><i class="uk-icon-download"><i></button>
+  <button id="btnFirefoxExtension" data-uk-tooltip="{pos:'bottom-left'}" title="You need this extension to be able to record your screen" class="uk-button uk-button-danger" onclick="intallFirefoxScreenCapturingExtension(); return false;"><i class="uk-icon-cloud-download"></i> Install Firefox Extension</button>
 </div>
