@@ -27,6 +27,7 @@
 }
 
 #desktop{
+  width:1280px;
   height:720px;
   left:0;
   top:0;
@@ -36,11 +37,17 @@
 #camera{
   height:240px;
   left:0;
-  top:580px;
+  top:478px;
   border:1px white solid;
+  position:absolute;
 }
 .control-panel{
   position: absolute;
   top: 10px;
   left: 5px;
+  width:100%;
+}
+#btnFirefoxExtension{
+  position:absolute;
+  right:15px;
 }

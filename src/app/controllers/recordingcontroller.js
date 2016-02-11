@@ -16,6 +16,14 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   playButton.onclick = play;
   downloadButton.onclick = download;
 
+  $(document).mousemove(function(event) {
+    if(event.clientY < 200){
+      $(".control-panel").fadeIn();
+    }else{
+      $(".control-panel").fadeOut();
+    }
+  });
+
   var gotStream = function(videoElement){
     return function(stream){
       videoElement.src = window.URL.createObjectURL(stream);
@@ -39,7 +47,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
       startRecording();
     } else {
       stopRecording();
-      recordButton.textContent = 'Start Recording';
+      recordButton.style.color = 'red';
       playButton.disabled = false;
       downloadButton.disabled = false;
     }
@@ -69,7 +77,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
       }
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-    recordButton.style.color="black";
+    recordButton.style.color="green";
     playButton.disabled = true;
     downloadButton.disabled = true;
     mediaRecorder.ondataavailable = handleDataAvailable;
@@ -104,14 +112,12 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     }, 100);
   };
 
-
-
   this.init = function()
   {
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     window.postMessage({
       enableScreenCapturing: true,
-      domains: ["streamelopers.org", "stream.meta.do", "localhost","localhost:8000"]
+      domains: ["streamelopers.org", "stream.meta.do"]
     }, "*");
   };
   this.init();

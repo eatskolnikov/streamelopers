@@ -148,10 +148,10 @@ module.exports = function(grunt) {
             }],
             options: {
               replacements: [{
-                pattern: 'STREMELOPERS_CURRENT_VERSION',
+                pattern: 'STREAMELOPERS_CURRENT_VERSION',
                 replacement: date
               },{
-                pattern: 'STREMELOPERS_CURRENT_VERSION',
+                pattern: 'STREAMELOPERS_CURRENT_VERSION',
                 replacement: date
               }]
             }
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-remove');
     grunt.registerTask('build', function () {
-        grunt.task.run(['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove','string-replace']);
+        grunt.task.run(['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove', 'string-replace']);
     });
     grunt.registerTask('default', ['watch']);
 };
