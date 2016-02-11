@@ -21,6 +21,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.1",
     "grunt-remove": "^0.1.0",
+    "grunt-string-replace": "^1.2.1",
     "serve-static": "*"
   },
   "author": "Enmanuel Toribio"

@@ -1,4 +1,21 @@
 module.exports = function(grunt) {
+    var pad = function (number, length) {
+      var str = '' + number;
+      while (str.length < length) {
+          str = '0' + str;
+      }
+      return str;
+    };
+    Date.prototype.YYYYMMDDHHMMSS = function () {
+       var yyyy = this.getFullYear().toString();
+       var MM = pad(this.getMonth() + 1,2);
+       var dd = pad(this.getDate(), 2);
+       var hh = pad(this.getHours(), 2);
+       var mm = pad(this.getMinutes(), 2);
+       var ss = pad(this.getSeconds(), 2);
+       return yyyy + MM + dd+  hh + mm + ss;
+    };
+    var date = new Date().YYYYMMDDHHMMSS();
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
@@ -7,7 +24,7 @@ module.exports = function(grunt) {
         watch: {
             build: {
                 files: ['src/**/*.js','src/**/*.css', 'src/**/*.html', 'src/**/*.json'],
-                tasks: ['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove'],
+                tasks: ['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove','string-replace'],
                 options: {
                     spawn: false
                 }
@@ -119,8 +136,28 @@ module.exports = function(grunt) {
                 trace: true,
                 fileList: ['build/app.js', 'build/assets/css/main.css', 'build/templates.js']
             }
+        },
+        'string-replace':{
+          dist:{
+            files:[{
+              expand:true,
+              cwd:'build/',
+              src: ['**/*.js','**/*.html'],
+              dest:'build/'
+            }],
+            options: {
+              replacements: [{
+                pattern: 'STREMELOPERS_CURRENT_VERSION',
+                replacement: date
+              },{
+                pattern: 'STREMELOPERS_CURRENT_VERSION',
+                replacement: date
+              }]
+            }
+          }
         }
     });
+    grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -134,7 +171,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-remove');
     grunt.registerTask('build', function () {
-        grunt.task.run(['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove']);
+        grunt.task.run(['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove','string-replace']);
     });
     grunt.registerTask('default', ['watch']);
 };
