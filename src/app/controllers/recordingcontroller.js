@@ -9,8 +9,8 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var recordButton = document.getElementById('btnRecord');
   var playButton = document.getElementById('btnPlay');
   var downloadButton = document.getElementById('btnDownload');
-  this.camera = document.getElementById("camera");
-  this.desktop = document.getElementById("desktop");
+  var camera = document.getElementById("camera");
+  var desktop = document.getElementById("desktop");
 
   recordButton.onclick = toggleRecording;
   playButton.onclick = play;
@@ -27,6 +27,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var gotStream = function(videoElement){
     return function(stream){
       videoElement.src = window.URL.createObjectURL(stream);
+      console.log(videoElement);
       videoElement.play();
     };
   };
@@ -93,7 +94,6 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
 
   var play = function () {
     var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
-    //Muestra la grabacion
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
   };
 
@@ -125,7 +125,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     if(sourceId === "firefox"){
       screen_constraints.video.mediaSource = "screen";
     }
-    this.desktopMedia = navigator.getUserMedia(screen_constraints, gotStream(this.desktop), errorHandler);
-    this.cameraMedia = navigator.getUserMedia({video:true, audio:true }, gotStream(this.camera), errorHandler);
+    this.desktopMedia = navigator.getUserMedia(screen_constraints, gotStream(desktop), errorHandler);
+    this.cameraMedia = navigator.getUserMedia({video:true, audio:true }, gotStream(camera), errorHandler);
   });
 }]);
