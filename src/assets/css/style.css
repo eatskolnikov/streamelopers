@@ -25,3 +25,22 @@
 .shadowed-text{
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+#desktop{
+  height:720px;
+  left:0;
+  top:0;
+  background:black;
+  position:absolute;
+}
+#camera{
+  height:240px;
+  left:0;
+  top:580px;
+  border:1px white solid;
+}
+.control-panel{
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
