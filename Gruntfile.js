@@ -103,6 +103,7 @@ module.exports = function(grunt) {
                     {expand: true, flatten: true, src: ['src/manifest.json'], dest: 'build/', filter:'isFile'},
                     {expand: true, flatten: true, src: ['src/browserconfig.xml'], dest: 'build/', filter:'isFile'},
                     {expand: true, flatten: true, src: ['src/streamelopers_donations.csv'], dest: 'build/', filter:'isFile'}
+                    {expand: true, flatten: true, src: ['src/google17e988616126521e.html'], dest: 'build/', filter:'isFile'}
                 ]
             }
         },
@@ -113,7 +114,7 @@ module.exports = function(grunt) {
         },
         imagemin: {
             options: {                       // Target options
-                optimizationLevel: 5
+                optimizationLevel: 3
             },
             dynamic: {
                 files: [{
