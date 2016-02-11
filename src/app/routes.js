@@ -5,6 +5,11 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
+        .when('/recording', {
+            templateUrl: 'src/app/views/recording/index.html',
+            controller: 'RecordingCtrl',
+            controllerAs: 'recording'
+        })
         .when('/_=_', {
           redirectTo: '/'
         })
