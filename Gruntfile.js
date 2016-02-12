@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         watch: {
             build: {
                 files: ['src/**/*.js','src/**/*.css', 'src/**/*.html', 'src/**/*.json'],
-                tasks: ['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin', 'remove','string-replace'],
+                tasks: ['jshint', 'clean:build', 'ngtemplates', 'concat', 'uglify', 'cssmin', 'htmlmin', 'copy', 'imagemin','string-replace'],
                 options: {
                     spawn: false
                 }

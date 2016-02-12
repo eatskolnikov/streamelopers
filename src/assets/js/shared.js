@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var showModal = (Math.floor((Math.random() * 10) + 1) % 3) == 1;
-
   if(showModal) {
     if($("#modalDonate").data('show')){
       $("#modalDonate").on({
