@@ -120,7 +120,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
   };
-  var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+  var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
   this.init = function()
   {
     recordButton.onclick = toggleRecording;
@@ -137,7 +137,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     if(sourceId === "firefox"){
       screen_constraints.video.mediaSource = "screen";
     }
-    userMedia(screen_constraints, gotStream(desktop, desktopStream), errorHandler);
-    userMedia({video:true, audio:true }, gotStream(camera, cameraStream), errorHandler);
+    navigator.mediaDevices.getUserMedia(screen_constraints, gotStream(desktop, desktopStream), errorHandler);
+    navigator.mediaDevices.getUserMedia({video:true, audio:true }, gotStream(camera, cameraStream), errorHandler);
   });
 }]);

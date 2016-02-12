@@ -7,8 +7,8 @@ var app = connect();
 var port = 8000;
 app.use( serveStatic("./build"));
 var options = {
-    key: fs.readFileSync('./cert/server.key'),
-    cert: fs.readFileSync('./cert/server.crt'),
+    key: fs.readFileSync('./cert/myserver.key'),
+    cert: fs.readFileSync('./cert/myserver.crt'),
     requestCert: false,
     rejectUnauthorized: false
 };
