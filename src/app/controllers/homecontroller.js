@@ -1,9 +1,11 @@
 app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($scope, $http, $timeout, $filter)
 {
   var orderBy = $filter('orderBy');
+  this.getSuperDonors = function(value, index, array){
+    return value.Amount >= 60;
+  };
   this.playlists = [];
   this.donors = [];
-
   this.playerVars = {
     autoplay: 1
   };
@@ -13,7 +15,7 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
     $http.get(playlistsUrl).success(angular.bind(this, function(data){
       this.playlists = orderBy(data.items,'title', false);
     }));
-    Papa.parse("/streamelopers_donations.csv", {
+    Papa.parse("/streamelopers_donations.csv?v=STREAMELOPERS_CURRENT_VERSION", {
     	download: true,
 	    header: true,
     	complete: angular.bind(this, function(results) {

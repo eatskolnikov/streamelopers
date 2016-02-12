@@ -60,6 +60,7 @@ module.exports = function(grunt) {
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
                      'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js',
+                     'bower_components/recordrtc/RecordRTC.min.js',
                      'src/assets/js/shared.js',
                      'src/app/app.js',
                      'build/templates.js',
@@ -115,7 +116,7 @@ module.exports = function(grunt) {
         },
         imagemin: {
             options: {                       // Target options
-                optimizationLevel: 1
+                optimizationLevel: 5
             },
             dynamic: {
                 files: [{

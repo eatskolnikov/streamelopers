@@ -43,10 +43,24 @@
   </div>
   <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
     <div class="uk-width-1-1">
-      <h2>Estamos aquí gracias a las donaciones de</h2>
+      <h2>Estamos aquí gracias a las contribuciones de</h2>
       <hr/>
-      <div ng-repeat="donor in home.donors">
-        {{donor.Name}}
+      <div id="SuperSponsors">
+        <ul class="uk-list list-inline uk-text-center">
+          <li ng-repeat="donor in home.donors | filter:home.getSuperDonors">
+            <a href="{{donor.url}}" title="{{donor.Name}}">
+              <img ng-src="{{donor['url a imagen']}}" class="donor-image" alt="{{donor.Name}}"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div >
+        <ul class="uk-list list-inline uk-text-center" >
+          <li ng-repeat="donor in home.donors" >
+            <a ng-show="donor.Amount >= 25 && donor.Amount < 60" href="{{donor.url}}" target="_blank"><b>{{donor.Name}}</b></a>
+            <span ng-show="donor.Amount < 25">{{donor.Name}}</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

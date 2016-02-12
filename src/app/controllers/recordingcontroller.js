@@ -1,5 +1,12 @@
 app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', function($scope, $http, $timeout, $filter)
 {
+  $(document).mousemove(function(event) {
+    if(event.clientY < 200){
+      $(".control-panel").fadeIn();
+    }else{
+      $(".control-panel").fadeOut();
+    }
+  });
   var mediaSource = new MediaSource();
   mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
   var mediaRecorder;
@@ -8,21 +15,16 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var recordedVideo = document.getElementById('recordedVideo');
   var recordButton = document.getElementById('btnRecord');
   var playButton = document.getElementById('btnPlay');
-  var downloadButton = document.getElementById('btnDownload');
+  var downloadButton = document.getElementById('btnDownloadDesktop');
+  var downloadCameraButton = document.getElementById('btnDownloadCamera');
   var camera = document.getElementById("camera");
   var desktop = document.getElementById("desktop");
 
   recordButton.onclick = toggleRecording;
   playButton.onclick = play;
-  downloadButton.onclick = download;
+  downloadButton.onclick = download("desktop");
+  downloadCameraButton.onClick = download("camera");
 
-  $(document).mousemove(function(event) {
-    if(event.clientY < 200){
-      $(".control-panel").fadeIn();
-    }else{
-      $(".control-panel").fadeOut();
-    }
-  });
 
   var gotStream = function(videoElement){
     return function(stream){
@@ -44,7 +46,10 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     }
   };
   var toggleRecording = function() {
+    console.log("Toggle Recording");
     if (recordButton.style.color === 'red') {
+      recordButton.innerHTML = '<i class="uk-icon-pause"><i>';
+      recordButton.style.color="blue";
       startRecording();
     } else {
       stopRecording();
@@ -78,7 +83,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
       }
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-    recordButton.style.color="green";
+    recordButton.style.color="blue";
     playButton.disabled = true;
     downloadButton.disabled = true;
     mediaRecorder.ondataavailable = handleDataAvailable;
@@ -97,19 +102,21 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
   };
 
-  var download = function () {
-    var blob = new Blob(recordedBlobs, {type: 'video/webm'});
-    var url = window.URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download = 'test.webm';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(function() {
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
-    }, 100);
+  var download = function (name) {
+    return function(){
+      var blob = new Blob(recordedBlobs, {type: 'video/webm'});
+      var url = window.URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = name+'.webm';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }, 100);
+    };
   };
 
   this.init = function()
