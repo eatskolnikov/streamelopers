@@ -129,7 +129,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     downloadCameraButton.onclick = downloadHandler("camera");
     window.postMessage({
       enableScreenCapturing: true,
-      domains: ["streamelopers.org", "stream.meta.do"]
+      domains: ["streamelopers.org", "stream.meta.do", "localhost"]
     }, "*");
   };
   this.init();
