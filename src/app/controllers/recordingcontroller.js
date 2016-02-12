@@ -120,15 +120,13 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
   };
-
-
+  var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
   this.init = function()
   {
     recordButton.onclick = toggleRecording;
     playButton.onclick = play;
     downloadButton.onclick = downloadHandler("desktop");
     downloadCameraButton.onclick = downloadHandler("camera");
-    var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     window.postMessage({
       enableScreenCapturing: true,
       domains: ["streamelopers.org", "stream.meta.do"]
