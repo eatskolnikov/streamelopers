@@ -19,9 +19,6 @@ app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($sc
     	download: true,
 	    header: true,
     	complete: angular.bind(this, function(results) {
-        results.data.push({Name:"Jhonatas Miguel Rodríguez", Amount:20});
-        results.data.push({Name:"Jhuliano Skittberg Moreno", Amount:10});
-        results.data.push({Name:"Alberto Espinal Cruz", Amount:10});
         this.donors = orderBy(results.data,'Amount',true);
     	})
     });
