@@ -128,7 +128,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     playButton.onclick = play;
     downloadButton.onclick = downloadHandler("desktop");
     downloadCameraButton.onclick = downloadHandler("camera");
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
+    var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     window.postMessage({
       enableScreenCapturing: true,
       domains: ["streamelopers.org", "stream.meta.do"]
@@ -139,7 +139,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     if(sourceId === "firefox"){
       screen_constraints.video.mediaSource = "screen";
     }
-    navigator.getUserMedia(screen_constraints, gotStream(desktop, desktopStream), errorHandler);
-    navigator.getUserMedia({video:true, audio:true }, gotStream(camera, cameraStream), errorHandler);
+    userMedia(screen_constraints, gotStream(desktop, desktopStream), errorHandler);
+    userMedia({video:true, audio:true }, gotStream(camera, cameraStream), errorHandler);
   });
 }]);
