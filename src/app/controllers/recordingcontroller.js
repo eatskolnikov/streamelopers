@@ -128,7 +128,7 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     playButton.onclick = play;
     downloadButton.onclick = downloadHandler("desktop");
     downloadCameraButton.onclick = downloadHandler("camera");
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
     window.postMessage({
       enableScreenCapturing: true,
       domains: ["streamelopers.org", "stream.meta.do"]
