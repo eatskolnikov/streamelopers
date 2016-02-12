@@ -34,17 +34,24 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var downloadButton = document.getElementById('btnDownloadDesktop');
   var downloadCameraButton = document.getElementById('btnDownloadCamera');
   var camera = document.getElementById("camera");
-  var cameraStream;
+//  var cameraStream;
   var cameraRecorder;
   var desktop = document.getElementById("desktop");
   var desktopStream;
   var desktopRecorder;
 
-  var gotStream = function(videoElement, mediaStream){
+  var gotStream = function(videoElement, mediaStream, callback){
     return function(stream){
-      mediaStream = stream;
+      console.log(stream);
+      window[mediaStream] = stream;
+      console.log('mediaStream');
+      console.log(mediaStream);
       videoElement.src = window.URL.createObjectURL(stream);
       videoElement.play();
+      console.log(callback);
+      if(typeof(callback)!=='undefined'){
+        callback();
+      }
     };
   };
   var errorHandler = function(error){
@@ -74,7 +81,9 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var startRecording = function () {
     var options = {mimeType: 'video/webm'};
     recordedBlobs = [];
+    console.log("cameraStream");
     console.log(cameraStream);
+    var cameraStream = window.cameraStream;
     try {
       cameraRecorder = new MediaRecorder(cameraStream, options);
     } catch (e0) {
@@ -137,7 +146,10 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     if(sourceId === "firefox"){
       screen_constraints.video.mediaSource = "screen";
     }
-    navigator.mediaDevices.getUserMedia(screen_constraints, gotStream(desktop, desktopStream), errorHandler);
-    navigator.mediaDevices.getUserMedia({video:true, audio:true }, gotStream(camera, cameraStream), errorHandler);
+    var captureScreen = function(){
+      navigator.getUserMedia(screen_constraints, gotStream(desktop, 'desktopStream'), errorHandler);
+    };
+    navigator.getUserMedia({video:true, audio:true }, gotStream(camera, 'cameraStream', captureScreen), errorHandler);
+
   });
 }]);
