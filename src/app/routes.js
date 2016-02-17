@@ -10,6 +10,11 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'RecordingCtrl',
             controllerAs: 'recording'
         })
+        .when('/cast', {
+            templateUrl: 'src/app/views/cast/index.html',
+            controller: 'CastCtrl',
+            controllerAs: 'cast'
+        })
         .when('/_=_', {
           redirectTo: '/'
         })
@@ -17,6 +22,6 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             templateUrl: 'app/views/404.html',
         });
     $locationProvider.html5Mode({
-        enabled: true
+        enabled: false
     });
 }]);

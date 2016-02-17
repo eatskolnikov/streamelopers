@@ -7,10 +7,15 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
       $(".control-panel").fadeOut();
     }
   });
-  var recordedBlobs = [];
-  var downloadHandler = function (name) {
+  var recordedBlobs = {
+    camera:[],
+    desktop:[]
+  };
+  var downloadHandler = function (name){
     return function(){
-      var blob = new Blob(recordedBlobs, {type: 'video/webm'});
+      console.log(name);
+      console.log(recordedBlobs.camera);
+      var blob = new Blob(recordedBlobs.camera, {type: 'video/mpeg4'});
       var url = window.URL.createObjectURL(blob);
       var a = document.createElement('a');
       a.style.display = 'none';
@@ -25,7 +30,9 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     };
   };
   var mediaSource = new MediaSource();
-  mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
+  mediaSource.addEventListener('sourceopen', function(){
+    mediaSource.addSourceBuffer('video/mpeg4');
+  }, false);
   var mediaRecorder;
   var sourceBuffer;
   var recordedVideo = document.getElementById('recordedVideo');
@@ -34,7 +41,6 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
   var downloadButton = document.getElementById('btnDownloadDesktop');
   var downloadCameraButton = document.getElementById('btnDownloadCamera');
   var camera = document.getElementById("camera");
-//  var cameraStream;
   var cameraRecorder;
   var desktop = document.getElementById("desktop");
   var desktopStream;
@@ -42,13 +48,9 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
 
   var gotStream = function(videoElement, mediaStream, callback){
     return function(stream){
-      console.log(stream);
       window[mediaStream] = stream;
-      console.log('mediaStream');
-      console.log(mediaStream);
       videoElement.src = window.URL.createObjectURL(stream);
       videoElement.play();
-      console.log(callback);
       if(typeof(callback)!=='undefined'){
         callback();
       }
@@ -58,29 +60,26 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     console.log('navigator.getUserMedia error: ');
     console.log(error);
   };
-  var handleSourceOpen = function (event) {
-    console.log("handleSourceOpen");
-    sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp8"');
-  };
-  var handleDataAvailable = function (event) {
-    if (event.data && event.data.size > 0) {
-      recordedBlobs.push(event.data);
-    }
+  var handleDataAvailable = function(blob){
+    return function (event) {
+      console.log(blob);
+      if (event.data && event.data.size > 0) {
+        blob.push(event.data);
+      }
+    };
   };
   var toggleRecording = function() {
-    console.log("Toggle Recording");
     if (recordButton.style.color === 'red') {
-      if(!startRecording()){
-
-      }
+      startRecording();
     } else {
       stopRecording();
     }
   };
 
   var startRecording = function () {
-    var options = {mimeType: 'video/webm'};
-    recordedBlobs = [];
+    var options = {mimeType: 'video/mpeg4'};
+    recordedBlobs.camera = [];
+    recordedBlobs.desktop = [];
     console.log("cameraStream");
     console.log(cameraStream);
     var cameraStream = window.cameraStream;
@@ -109,24 +108,24 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
     recordButton.style.color="blue";
     playButton.disabled = true;
     downloadButton.disabled = true;
-    cameraRecorder.ondataavailable = handleDataAvailable;
+    downloadCameraButton.disabled = false;
+    cameraRecorder.ondataavailable = handleDataAvailable(recordedBlobs.camera);
     cameraRecorder.start(10); // collect 10ms of data
     console.log('MediaRecorder started', cameraRecorder);
     return true;
   };
-
   var stopRecording = function () {
     cameraRecorder.stop();
     recordButton.innerHTML = '<i class="uk-icon-circle"><i>';
     recordButton.style.color = 'red';
     playButton.disabled = false;
     downloadButton.disabled = false;
-    console.log('Recorded Blobs: ', recordedBlobs);
-    recordedVideo.controls = true;
+    downloadCameraButton.disabled = false;
+//    recordedVideo.controls = true;
   };
 
   var play = function () {
-    var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+    var superBuffer = new Blob(recordedBlobs.camera, {type: 'video/webm'});
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
   };
   var userMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
@@ -150,6 +149,5 @@ app.controller("RecordingCtrl", ['$scope', '$http',"$timeout",'$filter', functio
       navigator.getUserMedia(screen_constraints, gotStream(desktop, 'desktopStream'), errorHandler);
     };
     navigator.getUserMedia({video:true, audio:true }, gotStream(camera, 'cameraStream', captureScreen), errorHandler);
-
   });
 }]);
