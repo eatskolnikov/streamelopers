@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            all: ['Gruntfile.js', 'src/app/**/*.js']
+            all: ['Gruntfile.js', 'src/app/**/*.js', 'src/sw.js']
         },
         watch: {
             build: {
@@ -59,7 +59,6 @@ module.exports = function(grunt) {
                      'bower_components/papaparse/papaparse.min.js',
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
-                     'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js',
                      'bower_components/recordrtc/RecordRTC.min.js',
                      'src/assets/js/shared.js',
                      'src/app/app.js',
@@ -105,7 +104,8 @@ module.exports = function(grunt) {
                     {expand: true, flatten: true, src: ['src/manifest.json'], dest: 'build/', filter:'isFile'},
                     {expand: true, flatten: true, src: ['src/browserconfig.xml'], dest: 'build/', filter:'isFile'},
                     {expand: true, flatten: true, src: ['src/streamelopers_donations.csv'], dest: 'build/', filter:'isFile'},
-                    {expand: true, flatten: true, src: ['src/google17e988616126521e.html'], dest: 'build/', filter:'isFile'}
+                    {expand: true, flatten: true, src: ['src/google17e988616126521e.html'], dest: 'build/', filter:'isFile'},
+                    {expand: true, flatten: true, src: ['src/sw.js'], dest: 'build/', filter:'isFile'}
                 ]
             }
         },
@@ -150,10 +150,10 @@ module.exports = function(grunt) {
             }],
             options: {
               replacements: [{
-                pattern: 'STREAMELOPERS_CURRENT_VERSION',
+                pattern: /STREAMELOPERS_CURRENT_VERSION/ig,
                 replacement: date
               },{
-                pattern: 'STREAMELOPERS_CURRENT_VERSION',
+                pattern: /STREAMELOPERS_CURRENT_VERSION/ig,
                 replacement: date
               }]
             }

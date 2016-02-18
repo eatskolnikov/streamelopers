@@ -1,4 +1,4 @@
-app.controller("HomeCtrl", ['$scope', '$http',"$timeout",'$filter', function($scope, $http, $timeout, $filter)
+app.controller("HomeCtrl", ['$scope', '$http','$filter', function($scope, $http, $filter)
 {
   var orderBy = $filter('orderBy');
   this.getSuperDonors = function(value, index, array){

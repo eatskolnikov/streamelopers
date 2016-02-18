@@ -1,1 +1,1 @@
-var app = angular.module('StreamelopersApp', ['ngRoute','youtube-embed']);
+var app = angular.module('StreamelopersApp', ['ngRoute']);

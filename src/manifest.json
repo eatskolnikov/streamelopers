@@ -1,5 +1,8 @@
 {
  "name": "Streamelopers",
+ "short_name": "Streamelopers",
+ "start_url": "/index.html",
+ "display": "stand_alone",
  "icons": [
   {
    "src": "\/assets\/img\/icons\/android-icon-36x36.png",

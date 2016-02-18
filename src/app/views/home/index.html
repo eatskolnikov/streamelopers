@@ -20,7 +20,7 @@
     <div id="streamingContainer" class="streamingContainer uk-width-medium-1-2" data-uk-grid-margin>
       <div class="uk-vertical-align uk-text-center">
         <div clas="uk-vertical-align-middle">
-          <youtube-video video-id="home.youtubeVideoId" player-vars="home.playerVars" class="uk-width-1-1"></youtube-video>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gbYeKK_xo6U" frameborder="0" class="uk-width-1-1" allowfullscreen autoplay></iframe>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="uk-width-1-1">
       <h2>Transmisiones anteriores</h2>
       <hr/>
-      <ul class="uk-thumbnav uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4">
+      <ul class="uk-thumbnav uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4 uk-text-center-small">
         <li ng-repeat="playlist in home.playlists">
           <a ng-href="https://www.youtube.com/playlist?list={{playlist.id}}">
             <figure class="uk-overlay ">
