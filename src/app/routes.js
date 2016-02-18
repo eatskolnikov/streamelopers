@@ -15,11 +15,16 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'CastCtrl',
             controllerAs: 'cast'
         })
+        .when('/donate', {
+            templateUrl: 'src/app/views/donate/index.html',
+            controller: 'DonateCtrl',
+            controllerAs: 'donate'
+        })
         .when('/_=_', {
           redirectTo: '/'
         })
         .otherwise({
-            templateUrl: 'app/views/404.html',
+            templateUrl: 'src/app/views/404.html',
         });
     $locationProvider.html5Mode({
         enabled: false
