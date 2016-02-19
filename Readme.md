@@ -41,8 +41,12 @@ Watching
 
 Watches any changes made to code files inside the src/ folder. If the watcher sees a change it starts the building process
 
+Security
+--------------
+
+Some features (like webRTC and ServiceWorker) only work with https so you need to install a security certificate, follow the instructions (here)[https://gist.github.com/kyledrake/d7457a46a03d7408da31] 
 Running
 --------------
 	npm start
 
-Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accessible via http://localhost:8000
+Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accessible via https://localhost:8000
