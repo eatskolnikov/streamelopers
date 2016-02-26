@@ -13,7 +13,7 @@ var options = {
     rejectUnauthorized: false
 };
 
-console.log("Serving ./build content on port " + port +". Go to http://localhost:" + port);
+console.log("Serving ./build content on port " + port +". Go to https://localhost:" + port);
 //app.listen(port);
 
 https.createServer(options, app).listen(port);

@@ -2,7 +2,7 @@ app.controller("HomeCtrl", ['$scope', '$http','$filter', function($scope, $http,
 {
   var orderBy = $filter('orderBy');
   this.getSuperDonors = function(value, index, array){
-    return value.Amount >= 60;
+    return value.Amount >= 60 && value['url a imagen'];
   };
   this.playlists = [];
   this.donors = [];
