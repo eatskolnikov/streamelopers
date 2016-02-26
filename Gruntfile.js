@@ -55,7 +55,6 @@ module.exports = function(grunt) {
             app:{
                 src:['bower_components/jquery-2.1.4.min/index.js',
                      'bower_components/uikit/js/uikit.min.js',
-                     //'bower_components/uikit/js/components/tooltip.min.js',
                      'bower_components/papaparse/papaparse.min.js',
                      'bower_components/angular/angular.min.js',
                      'bower_components/angular-route/angular-route.min.js',
@@ -115,7 +114,7 @@ module.exports = function(grunt) {
             }
         },
         imagemin: {
-            options: {                       // Target options
+            options: {
                 optimizationLevel: 5
             },
             dynamic: {
