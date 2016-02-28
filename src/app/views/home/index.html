@@ -57,7 +57,7 @@
       <div >
         <ul class="uk-list list-inline uk-text-center" >
           <li ng-repeat="donor in home.donors" >
-            <a ng-show="donor.Amount >= 25 && !donor['url a imagen']" href="{{donor.url}}"><b>{{donor.Name}}</b>,</a>
+            <a ng-show="donor.Amount >= 25 && donor['url a imagen'] == ''" href="{{donor.url}}"><b>{{donor.Name}}</b>,</a>
             <span ng-show="donor.Amount < 25">{{donor.Name}},</span>
           </li>
         </ul>
