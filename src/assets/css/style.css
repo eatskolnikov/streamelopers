@@ -52,8 +52,12 @@
   right:15px;
 }
 
+.donor-image-big{
+  width:300px;
+  display:block;
+}
 .donor-image{
-  width:100px;
+  width:150px;
   display:block;
 }
 
