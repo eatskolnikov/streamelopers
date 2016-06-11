@@ -32,6 +32,6 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             templateUrl: 'src/app/views/404.html',
         });
     $locationProvider.html5Mode({
-        enabled: false
+        enabled: true
     });
 }]);
