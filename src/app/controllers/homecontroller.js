@@ -6,7 +6,7 @@ app.controller("HomeCtrl", ['$scope', '$http','$filter', function($scope, $http,
   };
   this.playlists = [];
   this.donors = [];
-  var playlistsUrl = 'https://www.googleapis.com/youtube/v3/playlists?key=AIzaSyCsH_dFYaU0Pvc2KZUE-I4LI8ppg3DmZKk&channelId=UCznWXigAvBa1ZtrgRmJGZgg&part=id,snippet&maxResults=24';
+  var playlistsUrl = 'https://www.googleapis.com/youtube/v3/playlists?key=AIzaSyAh2nl1KKOOliBVN0oTsnfzy1cZgtVdxhs&channelId=UCznWXigAvBa1ZtrgRmJGZgg&part=id,snippet&maxResults=24';
   this.init = function(){
     $http.get(playlistsUrl).success(angular.bind(this, function(data){
       this.playlists = orderBy(data.items,'title', false);

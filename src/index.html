@@ -38,58 +38,29 @@
     <![endif]-->
   </head>
   <body>
-  <!--
     <nav class="uk-navbar uk-navbar-attached">
       <div class="uk-container uk-container-center">
-        <a href="/" class="uk-navbar-brand uk-hidden-small">
-          <img class="navbar-logo" src="/assets/img/logos/logo-white-bg.png" alt="Streamelopers"/>
-        </a>
-        <a href="#sidebar" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-        <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
-          <a href="/">
-            <img class="navbar-logo" src="/assets/img/logos/logo-white-bg.png" alt="Streamelopers"/>
-          </a>
-        </div>
-        <ul class="uk-navbar-nav uk-hidden-small uk-navbar-flip">
-          <li class="uk-active"><a href="#">¿Qué es esto?</a></li>
-          <li><a href="#halloffame">Salón de la fama</a></li>
-          <li><a href="#">F.A.Q.S</a></li>
+        <ul class="uk-navbar-nav uk-hidden-small">
+          <li><a href="/#/"><img style="width:100px" src="/assets/img/logos/logo-white-bg.png"/></a></li>
+          <li><a href="/#/e3">E3 2016</a></li>
         </ul>
       </div>
     </nav>
 
-    <div id="sidebar" class="uk-offcanvas">
-      <div class="uk-offcanvas-bar">
-        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
-            <li><a href="documentation_get-started.html">Get started</a></li>
-        </ul>
-      </div>
-    </div>-->
     <div id="content" class="uk-container uk-container-center" ng-view>
       <div class="uk-width-medium-1-2 uk-width-small-1-2 uk-container-center uk-margin-large-top" style="text-align:center">
           <img class="uk-responsive-width" src="/assets/img/logos/logo-white-bg.png" alt="Streamelopers"><br/>
           <i class="uk-icon-spinner uk-icon-spin uk-icon-large"></i>
       </div>
     </div>
-  <!--  <div id="modalDonate" class="uk-modal" data-show="false">
-      <div class="uk-modal-dialog">
-        <div class="uk-modal-header"><h4>Un aviso antes de continuar</h4></div>
-        <p><b>Streamelopers</b> tiene la misión de facilitar el acceso a la información a personas que no puedan asistir a charlas y eventos de los usergroups. Por lo que si estás en la misma ciudad donde se efectúa una de esas actividades te recomendamos que participes presencialmente.</p>
-        <p>Ya que estás aquí, queremos aprovechar la oportunidad para dejarte saber que tenemos un <a href="https://goo.gl/DCwBvw">donorbox</a>, el dinero será utilizado para conseguir mejores equipos y cubrir los gastos operativos de la plataforma. Aquí debajo está el formulario para que ni tengas que salir de la página ;)</p>
-        <iframe src="https://donorbox.org/embed/streamelopers" height="685px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
-        <div class="uk-modal-footer uk-text-right">
-          <button id="btnCloseModalDonate" type="button" class="uk-button uk-modal-close" disabled="disabled">Cerrar</button>
-        </div>
-      </div>
-    </div>-->
+
     <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
     </script>
     <script src="https://cdn.WebRTC-Experiment.com/getScreenId.js" async></script>
-<!--    <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js" async></script>-->
-    <script src="app.min.js?v=STREAMELOPERS_CURRENT_VERSION" async></script>
+    <script src="app.min.js?v=STREAMELOPERS_CURRENT_VERSION" async defer></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -104,11 +75,11 @@
       <hr/>
       <div class="uk-grid uk-margin-top uk-margin-large-bottom" data-uk-grid-margin>
         <div class="uk-width-medium-2-5 uk-text-left-medium uk-text-center-small">
-          <a href="https://goo.gl/hG49wq" class="uk-button"> <i class="uk-icon-github"></i> Fork us on github </a>
+          <a href="https://github.com/eatskolnikov/streamelopers" class="uk-button"> <i class="uk-icon-github"></i> Fork us on github </a>
           <a href="https://donorbox.org/streamelopers" class="uk-button" style="background:#2d81c5 url(https://d1iczxrky3cnb2.cloudfront.net/logos/logo_20.png) no-repeat 2px center;color: #fff;text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 14px;padding: 0px 4px 0px 25px;" >Donate</a>
         </div>
         <div class="uk-width-medium-3-5 uk-text-right uk-text-center-small">
-          <p>&copy; 2015 Made by people who act their dreams with open eyes to make them possible</p>
+          <p>&copy; 2016</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 var CACHE_NAME = 'my-site-cache-vSTREAMELOPERS_CURRENT_VERSION';
 var urlsToCache = [
-  '/',
   '/assets/img/logos/logo-white-bg.png',
   '/assets/css/main.min.css?v=STREAMELOPERS_CURRENT_VERSION',
   '/app.min.js?v=STREAMELOPERS_CURRENT_VERSION'
