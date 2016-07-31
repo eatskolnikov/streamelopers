@@ -1,0 +1,433 @@
+{
+ "kind": "youtube#playlistListResponse",
+ "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/WjN-9mKXhXvIdBXFdViwx-XmlX8\"",
+ "pageInfo": {
+  "totalResults": 11,
+  "resultsPerPage": 24
+ },
+ "items": [
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/cDT3lPFES7i8SW_vkZhuJXH0EmQ\"",
+   "id": "PLW-4dWdTuQryqh6JPM9UfDBJ5HaTsYkM6",
+   "snippet": {
+    "publishedAt": "2016-05-08T17:33:09.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "DEVCA2016 Webinars",
+    "description": "Webinars del eventp DEVCA2016",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/0csOoum0fq8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/0csOoum0fq8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/0csOoum0fq8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/0csOoum0fq8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/0csOoum0fq8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "DEVCA2016 Webinars",
+     "description": "Webinars del eventp DEVCA2016"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/Xd4_dYiGs73s7oJ5ooVAHR2BD9g\"",
+   "id": "PLW-4dWdTuQrz2bNrZdhotuw-p6F6LlIlj",
+   "snippet": {
+    "publishedAt": "2016-04-27T14:12:44.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Python Dominicana",
+    "description": "Videos de la comunidad de Python dominicana",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/EEVleKeDv_I/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/EEVleKeDv_I/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/EEVleKeDv_I/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/EEVleKeDv_I/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Python Dominicana",
+     "description": "Videos de la comunidad de Python dominicana"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/M4RE9i2A4tqfSshH4rheJ2tzX7s\"",
+   "id": "PLW-4dWdTuQryzhz1YWfb-JLKmah1f5l1k",
+   "snippet": {
+    "publishedAt": "2016-02-09T12:37:15.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Emplea.do",
+    "description": "emplea.do es un proyecto open source de la comunidad de desarrolladores dominicanos para el mundo. Pull-requests are welcome from everyone https://github.com/developersdo/empleo-dot-net",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/2QtPf4wQtVo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/2QtPf4wQtVo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/2QtPf4wQtVo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/2QtPf4wQtVo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Emplea.do",
+     "description": "emplea.do es un proyecto open source de la comunidad de desarrolladores dominicanos para el mundo. Pull-requests are welcome from everyone https://github.com/developersdo/empleo-dot-net"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/ZL0CEb6Fe-2xfILmQGnadYeziDY\"",
+   "id": "PLW-4dWdTuQrz5tI5G-sLirxOQHqxQzQph",
+   "snippet": {
+    "publishedAt": "2016-01-19T03:01:57.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "UI/UX",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/TzMdISyYtw4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/TzMdISyYtw4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/TzMdISyYtw4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "UI/UX",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/AlXyCcCR3DgCmzK_33xZJXUW0CE\"",
+   "id": "PLW-4dWdTuQrxhXPpa-3SaQkQgfgTuH9bL",
+   "snippet": {
+    "publishedAt": "2015-12-30T13:56:32.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "GNU/Linux",
+    "description": "Charlas y actividades de la comunidad de Linux Dominicana, puedes enterarte de más actividades en el grupo de facebook https://www.facebook.com/groups/GNULinuxDominicana/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/mCUUZvSEW48/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/mCUUZvSEW48/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/mCUUZvSEW48/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "GNU/Linux",
+     "description": "Charlas y actividades de la comunidad de Linux Dominicana, puedes enterarte de más actividades en el grupo de facebook https://www.facebook.com/groups/GNULinuxDominicana/"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/r6o6y3iw2BE7jP0F-fQb5Ro6fm4\"",
+   "id": "PLW-4dWdTuQrzjrCg0iPmdVoBiAJ_YE670",
+   "snippet": {
+    "publishedAt": "2015-12-29T01:21:27.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "CDDV",
+    "description": "Comunidad Dominicana de Desarrolladores de Videojuegos",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Y4wEeRGming/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Y4wEeRGming/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Y4wEeRGming/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/Y4wEeRGming/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/Y4wEeRGming/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "CDDV",
+     "description": "Comunidad Dominicana de Desarrolladores de Videojuegos"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/tMpcKOYTqFUs1gIrWfxygUgtNt0\"",
+   "id": "PLW-4dWdTuQryBWRITX1CLFj-QxNXGsQ2x",
+   "snippet": {
+    "publishedAt": "2015-12-22T16:50:02.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Cocos2d-x",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/57wqAaH3EV8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/57wqAaH3EV8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/57wqAaH3EV8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/57wqAaH3EV8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Cocos2d-x",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/lqPmgURg3FCzHid9DU40ljvjX3s\"",
+   "id": "PLW-4dWdTuQryU9mhcmR5YQcNbaTVvs-is",
+   "snippet": {
+    "publishedAt": "2015-12-12T23:58:40.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Eventos Especiales",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/GTpOQvsk0aQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/GTpOQvsk0aQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/GTpOQvsk0aQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/GTpOQvsk0aQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Eventos Especiales",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/UNOWzWc_LBm5h_xK_Uxipec7cX8\"",
+   "id": "PLW-4dWdTuQrwswsfMqTz7zjrFxm_-MBUX",
+   "snippet": {
+    "publishedAt": "2015-12-08T17:55:45.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Startup Weekend Santo Domingo 2015",
+    "description": "Videos de preparación para el Startup Weekend 2015",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/4M3vYRa3uFk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/4M3vYRa3uFk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/4M3vYRa3uFk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/4M3vYRa3uFk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/4M3vYRa3uFk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Startup Weekend Santo Domingo 2015",
+     "description": "Videos de preparación para el Startup Weekend 2015"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/CvAtpL3P5TirEgc36YtVeQjEOoE\"",
+   "id": "PLW-4dWdTuQryJZDiu_yTBsiRZ0PIt6hYK",
+   "snippet": {
+    "publishedAt": "2015-12-08T17:50:19.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Lean Startup",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/7xDRdWDQkf0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/7xDRdWDQkf0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/7xDRdWDQkf0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Lean Startup",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/K_Eb2Xgay8hHQ7RzRmCMytd4srE\"",
+   "id": "PLW-4dWdTuQrxwsljznWB_w2ydZtB0AQq3",
+   "snippet": {
+    "publishedAt": "2015-11-28T00:52:21.000Z",
+    "channelId": "UCznWXigAvBa1ZtrgRmJGZgg",
+    "title": "Grupo Agnóstico",
+    "description": "Videos del Grupo Agnóstico",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/-IfU8U3J7NI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/-IfU8U3J7NI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/-IfU8U3J7NI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/-IfU8U3J7NI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/-IfU8U3J7NI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Streamelopers",
+    "localized": {
+     "title": "Grupo Agnóstico",
+     "description": "Videos del Grupo Agnóstico"
+    }
+   }
+  }
+ ]
+}

@@ -5,11 +5,6 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
-        .when('/e3', {
-            templateUrl: 'src/app/views/e3/index.html',
-            controller: 'E3Ctrl',
-            controllerAs: 'e3'
-        })
         .when('/recording', {
             templateUrl: 'src/app/views/recording/index.html',
             controller: 'RecordingCtrl',
