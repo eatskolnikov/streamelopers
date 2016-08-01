@@ -13,31 +13,49 @@ Install nodejs
 
 Open the command line and update npm
 --------------
-	npm install npm -g
+
+```shell
+npm install npm -g
+```
 
 Install bower
 --------------
-	npm install -g bower
+
+```shell
+npm install -g bower
+```
 
 **Before proceeding make sure you are in the project's root folder within the terminal**
 
 Install npm packages
 --------------
-	npm install
+
+```shell
+npm install
+```
 
 Install bower packages
 --------------
-	bower install
+
+```shell
+bower install
+```
 
 Building
 --------------
-	grunt build
+
+```shell
+grunt build
+```
 
 You can run the build task with this. It will validate js  files and create a build folder where it will copy all the css, js, images and html minified.
 
 Watching
 --------------
-	grunt watch
+
+```shell
+grunt watch
+```
 
 Watches any changes made to code files inside the src/ folder. If the watcher sees a change it starts the building process
 
@@ -47,6 +65,9 @@ Security
 Some features (like webRTC and ServiceWorker) only work with https so you need to install a security certificate, follow the instructions (here)[https://gist.github.com/kyledrake/d7457a46a03d7408da31] 
 Running
 --------------
-	npm start
+
+```shell
+npm start
+```
 
 Executes the "node server.js"  command and serve the content of the ./build directory via the port 8000 , accessible via https://localhost:8000
