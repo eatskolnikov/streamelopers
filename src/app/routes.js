@@ -5,7 +5,7 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
-        .when('/recording', {
+       /* .when('/recording', {
             templateUrl: 'src/app/views/recording/index.html',
             controller: 'RecordingCtrl',
             controllerAs: 'recording'
@@ -14,11 +14,12 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
             templateUrl: 'src/app/views/cast/index.html',
             controller: 'CastCtrl',
             controllerAs: 'cast'
-        })
+        })*/
         .when('/donate', {
-            templateUrl: 'src/app/views/donate/index.html',
-            controller: 'DonateCtrl',
-            controllerAs: 'donate'
+            //templateUrl: 'src/app/views/donate/index.html',
+            //controller: 'DonateCtrl',
+            //controllerAs: 'donate'
+            redirectTo: "https://www.patreon.com/streamelopers"
         })
         .when('/_=_', {
           redirectTo: '/'

@@ -1,1 +1,1 @@
-var app = angular.module('StreamelopersApp', ['ngRoute', 'firebase']);
+var app = angular.module('StreamelopersApp', ['ngRoute']);

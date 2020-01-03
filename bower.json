@@ -11,9 +11,7 @@
     "angular": "~1.4.7",
     "angular-route": "~1.4.7",
     "uikit": "~2.23.0",
-    "webrtc-adapter": "~0.2.5",
     "papaparse": "~4.1.2",
-    "cast-manager-polymer": "googlecast/cast-manager-polymer#^1.0.8",
     "firebase": "^2.4.2",
     "angularfire": "^1.2.0"
   },
